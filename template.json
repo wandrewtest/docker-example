@@ -2,8 +2,16 @@
   "builders": [
     {
       "type": "docker",
-      "image": "phantomci/base",
-      "export_path": "phantomci_base.tar"
+      "image": "ubuntu",
+      "export_path": "ubuntu.tar"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "echo 'docker!'"
+      ]
     }
   ]
 }
